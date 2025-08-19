@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, rgb(4, 4, 79) 50%, rgb(2, 53, 83) 100%);
+}
+
+.hero-image {
+  z-index: -10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-blend-mode: multiply;
+}
