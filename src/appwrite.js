@@ -1,4 +1,5 @@
 import { Client, Databases, ID, Query } from "appwrite";
+import { toast } from "react-toastify";
 
 const DATABASE_ID = import.meta.env.VITE_APPWRITE_DATABASE_ID;
 const COLLECTION_ID = import.meta.env.VITE_APPWRITE_COLLECTION_ID;
@@ -31,7 +32,9 @@ export const updateSearchCount = async (searchTerm, movie) => {
         poster_url: `https://image.tmdb.org/t/p/w500/${movie.poster_path}`,
       });
     }
-  } catch (error) {}
+  } catch (error) {
+    toast.error("Error updating search count. Please try again later.");
+  }
   // 2. if it exists, increment the count
   // 3. if it doesn't exist, create a new document with count = 1
 };
