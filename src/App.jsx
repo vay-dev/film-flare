@@ -33,7 +33,6 @@ const App = () => {
 
   // ===== API METHODS (DO NOT MODIFY) =====
   const fetchMovies = async (query = "") => {
-    setLoading(true);
     setError(null);
     try {
       const endpoint = query
